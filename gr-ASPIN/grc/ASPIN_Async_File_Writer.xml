@@ -1,0 +1,27 @@
+<block>
+  <name>Async file writer</name>
+  <key>ASPIN_Async_File_Writer</key>
+  <category>[ASPIN]</category>
+  <import>import ASPIN</import>
+  <make>ASPIN.Async_File_Writer($filename, $queue_size, $block_size)</make>
+  <param>
+    <name>Filename</name>
+    <key>filename</key>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Queue_size</name>
+    <key>queue_size</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Block_size</name>
+    <key>block_size</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>int</type>
+    <nports>block_size</nports>
+  </sink>
+</block>

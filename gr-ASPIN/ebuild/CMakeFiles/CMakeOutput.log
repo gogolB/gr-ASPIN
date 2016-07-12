@@ -1,0 +1,354 @@
+The system is: Linux - 3.14.2-xilinx - armv7l
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/root/gr-ASPIN/ebuild/CMakeFiles/2.8.12.2/CompilerIdCXX/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/root/gr-ASPIN/ebuild/CMakeFiles/2.8.12.2/CompilerIdC/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec63890304/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec63890304.dir/build.make CMakeFiles/cmTryCompileExec63890304.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec63890304.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec63890304.dir/testCXXCompiler.cxx.o -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec63890304
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec63890304.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec63890304.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec63890304 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3856713873/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3856713873.dir/build.make CMakeFiles/cmTryCompileExec3856713873.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3856713873
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3856713873.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3856713873 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper
+Target: arm-oe-linux-gnueabi
+Configured with: /home/balister/release-4/build/tmp-glibc/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=arm-oe-linux-gnueabi --target=arm-oe-linux-gnueabi --prefix=/usr --exec_prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/lib/gcc --datadir=/usr/share --sysconfdir=/etc --sharedstatedir=/com --localstatedir=/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-oe-linux-gnueabi- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-float=hard --with-sysroot=/ --with-build-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-native-system-header-dir=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1/usr/include --with-gxx-include-dir=/usr/include/c++/4.9.2 --enable-nls --with-arch=armv7-a
+Thread model: posix
+gcc version 4.9.2 (GCC) 
+COMPILER_PATH=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../../arm-oe-linux-gnueabi/bin/
+LIBRARY_PATH=/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../:/lib/:/usr/lib/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3856713873' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=hard' '-mtls-dialect=gnu'
+ /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2 -plugin /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so -plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxjYF6j.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec3856713873 /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../.. -L/usr/lib/arm-oe-linux-gnueabi/4.9.2 CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec3856713873/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3856713873.dir/build.make CMakeFiles/cmTryCompileExec3856713873.dir/build]
+  ignore line: [make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3856713873]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3856713873.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3856713873 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper]
+  ignore line: [Target: arm-oe-linux-gnueabi]
+  ignore line: [Configured with: /home/balister/release-4/build/tmp-glibc/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=arm-oe-linux-gnueabi --target=arm-oe-linux-gnueabi --prefix=/usr --exec_prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/lib/gcc --datadir=/usr/share --sysconfdir=/etc --sharedstatedir=/com --localstatedir=/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-oe-linux-gnueabi- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-float=hard --with-sysroot=/ --with-build-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-native-system-header-dir=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1/usr/include --with-gxx-include-dir=/usr/include/c++/4.9.2 --enable-nls --with-arch=armv7-a]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../../arm-oe-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../:/lib/:/usr/lib/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3856713873' '-rdynamic' '-shared-libgcc' '-march=armv7-a' '-mfloat-abi=hard' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2 -plugin /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so -plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxjYF6j.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec3856713873 /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../.. -L/usr/lib/arm-oe-linux-gnueabi/4.9.2 CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o]
+    arg [/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccxjYF6j.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec3856713873] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2]
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2]
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..]
+    arg [-L/usr/lib/arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+    arg [CMakeFiles/cmTryCompileExec3856713873.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2;/usr/lib/arm-oe-linux-gnueabi/4.9.2;/usr/lib]
+  implicit fwks: []
+
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec180666036/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec180666036.dir/build.make CMakeFiles/cmTryCompileExec180666036.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec180666036.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec180666036.dir/testCCompiler.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec180666036
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec180666036.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec180666036.dir/testCCompiler.c.o  -o cmTryCompileExec180666036 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2920974962/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2920974962.dir/build.make CMakeFiles/cmTryCompileExec2920974962.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2920974962
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2920974962.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2920974962 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper
+Target: arm-oe-linux-gnueabi
+Configured with: /home/balister/release-4/build/tmp-glibc/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=arm-oe-linux-gnueabi --target=arm-oe-linux-gnueabi --prefix=/usr --exec_prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/lib/gcc --datadir=/usr/share --sysconfdir=/etc --sharedstatedir=/com --localstatedir=/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-oe-linux-gnueabi- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-float=hard --with-sysroot=/ --with-build-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-native-system-header-dir=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1/usr/include --with-gxx-include-dir=/usr/include/c++/4.9.2 --enable-nls --with-arch=armv7-a
+Thread model: posix
+gcc version 4.9.2 (GCC) 
+COMPILER_PATH=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../../arm-oe-linux-gnueabi/bin/
+LIBRARY_PATH=/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../:/lib/:/usr/lib/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2920974962' '-rdynamic' '-march=armv7-a' '-mfloat-abi=hard' '-mtls-dialect=gnu'
+ /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2 -plugin /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so -plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRAtRsi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec2920974962 /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../.. -L/usr/lib/arm-oe-linux-gnueabi/4.9.2 CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2920974962/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2920974962.dir/build.make CMakeFiles/cmTryCompileExec2920974962.dir/build]
+  ignore line: [make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2920974962]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2920974962.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2920974962 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper]
+  ignore line: [Target: arm-oe-linux-gnueabi]
+  ignore line: [Configured with: /home/balister/release-4/build/tmp-glibc/work-shared/gcc-4.9.2-r0/gcc-4.9.2/configure --build=x86_64-linux --host=arm-oe-linux-gnueabi --target=arm-oe-linux-gnueabi --prefix=/usr --exec_prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/lib/gcc --datadir=/usr/share --sysconfdir=/etc --sharedstatedir=/com --localstatedir=/var --libdir=/usr/lib --includedir=/usr/include --oldincludedir=/usr/include --infodir=/usr/share/info --mandir=/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-oe-linux-gnueabi- --without-local-prefix --enable-target-optspace --enable-lto --enable-libssp --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --with-float=hard --with-sysroot=/ --with-build-sysroot=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1 --with-native-system-header-dir=/home/balister/release-4/build/tmp-glibc/sysroots/ettus-e3xx-sg1/usr/include --with-gxx-include-dir=/usr/include/c++/4.9.2 --enable-nls --with-arch=armv7-a]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.9.2 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../../arm-oe-linux-gnueabi/bin/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/:/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../:/lib/:/usr/lib/arm-oe-linux-gnueabi/4.9.2/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2920974962' '-rdynamic' '-march=armv7-a' '-mfloat-abi=hard' '-mtls-dialect=gnu']
+  link line: [ /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2 -plugin /usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so -plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRAtRsi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTryCompileExec2920974962 /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2 -L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../.. -L/usr/lib/arm-oe-linux-gnueabi/4.9.2 CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o /usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o]
+    arg [/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/gcc/arm-oe-linux-gnueabi/4.9.2/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccRAtRsi.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2920974962] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crt1.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crti.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2]
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2]
+    arg [-L/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..] ==> dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..]
+    arg [-L/usr/lib/arm-oe-linux-gnueabi/4.9.2] ==> dir [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+    arg [CMakeFiles/cmTryCompileExec2920974962.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../../arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+  collapse library dir [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2/../../..] ==> [/usr/lib]
+  collapse library dir [/usr/lib/arm-oe-linux-gnueabi/4.9.2] ==> [/usr/lib/arm-oe-linux-gnueabi/4.9.2]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/arm-oe-linux-gnueabi/4.9.2;/usr/lib/arm-oe-linux-gnueabi/4.9.2;/usr/lib]
+  implicit fwks: []
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3812129255/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3812129255.dir/build.make CMakeFiles/cmTryCompileExec3812129255.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3812129255.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3812129255.dir/CheckIncludeFile.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3812129255
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3812129255.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3812129255.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3812129255 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3279814733/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3279814733.dir/build.make CMakeFiles/cmTryCompileExec3279814733.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3279814733.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3279814733.dir/CheckIncludeFile.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec3279814733
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3279814733.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3279814733.dir/CheckIncludeFile.c.o  -o cmTryCompileExec3279814733 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4173952691/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4173952691.dir/build.make CMakeFiles/cmTryCompileExec4173952691.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4173952691.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4173952691.dir/CheckIncludeFile.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTryCompileExec4173952691
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4173952691.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4173952691.dir/CheckIncludeFile.c.o  -o cmTryCompileExec4173952691 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1248301011/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1248301011.dir/build.make CMakeFiles/cmTryCompileExec1248301011.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1248301011.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1248301011.dir/SIZEOF_SIZE_T.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTryCompileExec1248301011
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1248301011.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1248301011.dir/SIZEOF_SIZE_T.c.o  -o cmTryCompileExec1248301011 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1293697722/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1293697722.dir/build.make CMakeFiles/cmTryCompileExec1293697722.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1293697722.dir/SIZEOF_UINT.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1293697722.dir/SIZEOF_UINT.c.o   -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CheckTypeSize/SIZEOF_UINT.c
+Linking C executable cmTryCompileExec1293697722
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1293697722.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1293697722.dir/SIZEOF_UINT.c.o  -o cmTryCompileExec1293697722 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE succeded with the following output:
+Change Dir: /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4115011400/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4115011400.dir/build.make CMakeFiles/cmTryCompileExec4115011400.dir/build
+make[1]: Entering directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4115011400.dir/src.cxx.o
+/usr/bin/c++    -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE   -Wno-unused-but-set-variable -o CMakeFiles/cmTryCompileExec4115011400.dir/src.cxx.o -c /home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec4115011400
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4115011400.dir/link.txt --verbose=1
+/usr/bin/c++    -DHAVE_WNO_UNUSED_BUT_SET_VARIABLE    CMakeFiles/cmTryCompileExec4115011400.dir/src.cxx.o  -o cmTryCompileExec4115011400 -rdynamic 
+make[1]: Leaving directory '/home/root/gr-ASPIN/ebuild/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}

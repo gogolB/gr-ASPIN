@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/root/gr-ASPIN/lib/qa_ASPIN.cc
+qa_ASPIN.h
+/home/root/gr-ASPIN/lib/qa_ASPIN.h
+
+/home/root/gr-ASPIN/lib/qa_ASPIN.h
+gnuradio/attributes.h
+-
+cppunit/TestSuite.h
+-
+
+/home/root/gr-ASPIN/lib/test_ASPIN.cc
+config.h
+/home/root/gr-ASPIN/lib/config.h
+cppunit/TextTestRunner.h
+-
+cppunit/XmlOutputter.h
+-
+gnuradio/unittests.h
+-
+qa_ASPIN.h
+/home/root/gr-ASPIN/lib/qa_ASPIN.h
+iostream
+-
+fstream
+-
+

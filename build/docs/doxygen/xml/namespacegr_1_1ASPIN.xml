@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespacegr_1_1ASPIN" kind="namespace">
+    <compoundname>gr::ASPIN</compoundname>
+    <innerclass refid="classgr_1_1ASPIN_1_1Async__File__Writer" prot="public">gr::ASPIN::Async_File_Writer</innerclass>
+    <innerclass refid="classgr_1_1ASPIN_1_1Async__File__Writer__impl" prot="public">gr::ASPIN::Async_File_Writer_impl</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/joe/gr-ASPIN/include/ASPIN/Async_File_Writer.h" line="30" column="1"/>
+  </compounddef>
+</doxygen>

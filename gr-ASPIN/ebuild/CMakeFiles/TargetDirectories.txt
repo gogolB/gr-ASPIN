@@ -1,0 +1,10 @@
+/home/root/gr-ASPIN/ebuild/swig/CMakeFiles/ASPIN_swig_swig_2d0df.dir
+/home/root/gr-ASPIN/ebuild/swig/CMakeFiles/ASPIN_swig_swig_doc.dir
+/home/root/gr-ASPIN/ebuild/swig/CMakeFiles/_ASPIN_swig.dir
+/home/root/gr-ASPIN/ebuild/swig/CMakeFiles/_ASPIN_swig_swig_tag.dir
+/home/root/gr-ASPIN/ebuild/lib/CMakeFiles/gnuradio-ASPIN.dir
+/home/root/gr-ASPIN/ebuild/apps/CMakeFiles/pygen_apps_9a6dd.dir
+/home/root/gr-ASPIN/ebuild/python/CMakeFiles/pygen_python_ffeed.dir
+/home/root/gr-ASPIN/ebuild/swig/CMakeFiles/pygen_swig_fd96b.dir
+/home/root/gr-ASPIN/ebuild/lib/CMakeFiles/test-ASPIN.dir
+/home/root/gr-ASPIN/ebuild/CMakeFiles/uninstall.dir

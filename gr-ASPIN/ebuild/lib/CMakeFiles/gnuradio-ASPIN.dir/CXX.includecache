@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ASPIN/Async_File_Writer.h
+ASPIN/api.h
+-
+gnuradio/sync_block.h
+-
+string
+-
+
+../include/ASPIN/api.h
+gnuradio/attributes.h
+-
+
+/home/root/gr-ASPIN/lib/Async_File_Writer_impl.cc
+config.h
+/home/root/gr-ASPIN/lib/config.h
+gnuradio/io_signature.h
+-
+Async_File_Writer_impl.h
+/home/root/gr-ASPIN/lib/Async_File_Writer_impl.h
+string
+-
+
+/home/root/gr-ASPIN/lib/Async_File_Writer_impl.h
+ASPIN/Async_File_Writer.h
+-
+boost/lockfree/spsc_queue.hpp
+-
+iostream
+-
+fstream
+-
+stdio.h
+-
+boost/thread/thread.hpp
+-
+boost/date_time/posix_time/posix_time.hpp
+-
+
