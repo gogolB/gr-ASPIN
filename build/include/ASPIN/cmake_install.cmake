@@ -36,6 +36,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ASPIN" TYPE FILE FILES
     "/home/joe/gr-ASPIN/include/ASPIN/api.h"
     "/home/joe/gr-ASPIN/include/ASPIN/Async_File_Writer.h"
+    "/home/joe/gr-ASPIN/include/ASPIN/Async_TCP_Client.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

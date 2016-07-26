@@ -25,7 +25,8 @@ include(GrPlatform) #define LIB_SUFFIX
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND ASPIN_sources
-    Async_File_Writer_impl.cc )
+    Async_File_Writer_impl.cc
+    Async_TCP_Client_impl.cc )
 
 set(ASPIN_sources "${ASPIN_sources}" PARENT_SCOPE)
 if(NOT ASPIN_sources)

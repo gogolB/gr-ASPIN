@@ -201,6 +201,30 @@ Async_File_Writer_impl.cc.s:
 	cd /home/joe/gr-ASPIN/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ASPIN.dir/build.make lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.s
 .PHONY : Async_File_Writer_impl.cc.s
 
+Async_TCP_Client_impl.o: Async_TCP_Client_impl.cc.o
+.PHONY : Async_TCP_Client_impl.o
+
+# target to build an object file
+Async_TCP_Client_impl.cc.o:
+	cd /home/joe/gr-ASPIN/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ASPIN.dir/build.make lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o
+.PHONY : Async_TCP_Client_impl.cc.o
+
+Async_TCP_Client_impl.i: Async_TCP_Client_impl.cc.i
+.PHONY : Async_TCP_Client_impl.i
+
+# target to preprocess a source file
+Async_TCP_Client_impl.cc.i:
+	cd /home/joe/gr-ASPIN/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ASPIN.dir/build.make lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.i
+.PHONY : Async_TCP_Client_impl.cc.i
+
+Async_TCP_Client_impl.s: Async_TCP_Client_impl.cc.s
+.PHONY : Async_TCP_Client_impl.s
+
+# target to generate assembly for a file
+Async_TCP_Client_impl.cc.s:
+	cd /home/joe/gr-ASPIN/build && $(MAKE) -f lib/CMakeFiles/gnuradio-ASPIN.dir/build.make lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.s
+.PHONY : Async_TCP_Client_impl.cc.s
+
 qa_ASPIN.o: qa_ASPIN.cc.o
 .PHONY : qa_ASPIN.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... Async_File_Writer_impl.o"
 	@echo "... Async_File_Writer_impl.i"
 	@echo "... Async_File_Writer_impl.s"
+	@echo "... Async_TCP_Client_impl.o"
+	@echo "... Async_TCP_Client_impl.i"
+	@echo "... Async_TCP_Client_impl.s"
 	@echo "... qa_ASPIN.o"
 	@echo "... qa_ASPIN.i"
 	@echo "... qa_ASPIN.s"

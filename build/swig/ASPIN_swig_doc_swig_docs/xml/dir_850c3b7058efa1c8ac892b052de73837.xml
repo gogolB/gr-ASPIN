@@ -4,6 +4,7 @@
     <compoundname>/home/joe/gr-ASPIN/include/ASPIN</compoundname>
     <innerfile refid="api_8h">api.h</innerfile>
     <innerfile refid="Async__File__Writer_8h">Async_File_Writer.h</innerfile>
+    <innerfile refid="Async__TCP__Client_8h">Async_TCP_Client.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

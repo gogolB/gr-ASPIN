@@ -17,5 +17,6 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 install(FILES
-    ASPIN_Async_File_Writer.xml DESTINATION share/gnuradio/grc/blocks
+    ASPIN_Async_File_Writer.xml
+    ASPIN_Async_TCP_Client.xml DESTINATION share/gnuradio/grc/blocks
 )

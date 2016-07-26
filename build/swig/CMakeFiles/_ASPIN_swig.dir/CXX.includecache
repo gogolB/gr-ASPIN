@@ -14,6 +14,12 @@ gnuradio/sync_block.h
 string
 -
 
+../include/ASPIN/Async_TCP_Client.h
+ASPIN/api.h
+-
+gnuradio/sync_block.h
+-
+
 ../include/ASPIN/api.h
 gnuradio/attributes.h
 -
@@ -63,6 +69,8 @@ limits.h
 -
 ASPIN/Async_File_Writer.h
 /home/joe/gr-ASPIN/build/swig/ASPIN/Async_File_Writer.h
+ASPIN/Async_TCP_Client.h
+/home/joe/gr-ASPIN/build/swig/ASPIN/Async_TCP_Client.h
 float.h
 -
 math.h

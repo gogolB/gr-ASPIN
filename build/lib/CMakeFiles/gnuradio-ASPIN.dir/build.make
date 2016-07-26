@@ -72,14 +72,39 @@ lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o.provides: lib/CMak
 
 lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o
 
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o: lib/CMakeFiles/gnuradio-ASPIN.dir/flags.make
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o: ../lib/Async_TCP_Client_impl.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/joe/gr-ASPIN/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o"
+	cd /home/joe/gr-ASPIN/build/lib && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o -c /home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.cc
+
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.i"
+	cd /home/joe/gr-ASPIN/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.cc > CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.i
+
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.s"
+	cd /home/joe/gr-ASPIN/build/lib && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.cc -o CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.s
+
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.requires:
+.PHONY : lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.requires
+
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.provides: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.requires
+	$(MAKE) -f lib/CMakeFiles/gnuradio-ASPIN.dir/build.make lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.provides.build
+.PHONY : lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.provides
+
+lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.provides.build: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o
+
 # Object files for target gnuradio-ASPIN
 gnuradio__ASPIN_OBJECTS = \
-"CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o"
+"CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o" \
+"CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o"
 
 # External object files for target gnuradio-ASPIN
 gnuradio__ASPIN_EXTERNAL_OBJECTS =
 
 lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o
+lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o
 lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0: lib/CMakeFiles/gnuradio-ASPIN.dir/build.make
 lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -100,6 +125,7 @@ lib/CMakeFiles/gnuradio-ASPIN.dir/build: lib/libgnuradio-ASPIN-1.0.0git.so
 .PHONY : lib/CMakeFiles/gnuradio-ASPIN.dir/build
 
 lib/CMakeFiles/gnuradio-ASPIN.dir/requires: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_File_Writer_impl.cc.o.requires
+lib/CMakeFiles/gnuradio-ASPIN.dir/requires: lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o.requires
 .PHONY : lib/CMakeFiles/gnuradio-ASPIN.dir/requires
 
 lib/CMakeFiles/gnuradio-ASPIN.dir/clean:

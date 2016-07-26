@@ -9,7 +9,10 @@
 
 %{
 #include "ASPIN/Async_File_Writer.h"
+#include "ASPIN/Async_TCP_Client.h"
 %}
 
 %include "ASPIN/Async_File_Writer.h"
 GR_SWIG_BLOCK_MAGIC2(ASPIN, Async_File_Writer);
+%include "ASPIN/Async_TCP_Client.h"
+GR_SWIG_BLOCK_MAGIC2(ASPIN, Async_TCP_Client);

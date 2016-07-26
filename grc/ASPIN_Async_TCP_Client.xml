@@ -1,0 +1,26 @@
+<block>
+  <name>Async tcp client</name>
+  <key>ASPIN_Async_TCP_Client</key>
+  <category>[ASPIN]</category>
+  <import>import ASPIN</import>
+  <make>ASPIN.Async_TCP_Client($serverIP, $port, $payloadSizeInSamples)</make>
+  <param>
+    <name>Serverip</name>
+    <key>serverIP</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Port</name>
+    <key>port</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Payloadsizeinsamples</name>
+    <key>payloadSizeInSamples</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>int</type>
+  </sink>
+</block>

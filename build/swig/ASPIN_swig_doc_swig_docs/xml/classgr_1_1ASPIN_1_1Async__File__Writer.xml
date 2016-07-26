@@ -51,25 +51,25 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="1">
-        <label>gr::sync_block</label>
-      </node>
       <node id="0">
         <label>gr::ASPIN::Async_File_Writer</label>
         <link refid="classgr_1_1ASPIN_1_1Async__File__Writer"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="1">
+        <label>sync_block</label>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="3">
-        <label>gr::sync_block</label>
-      </node>
       <node id="2">
         <label>gr::ASPIN::Async_File_Writer</label>
         <link refid="classgr_1_1ASPIN_1_1Async__File__Writer"/>
         <childnode refid="3" relation="public-inheritance">
         </childnode>
+      </node>
+      <node id="3">
+        <label>sync_block</label>
       </node>
     </collaborationgraph>
     <location file="/home/joe/gr-ASPIN/include/ASPIN/Async_File_Writer.h" line="38" column="1" bodyfile="/home/joe/gr-ASPIN/include/ASPIN/Async_File_Writer.h" bodystart="37" bodyend="51"/>

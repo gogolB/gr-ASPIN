@@ -1,17 +1,17 @@
 /* -*- c++ -*- */
-/* 
+/*
  * Copyright 2016 <+YOU OR YOUR COMPANY+>.
- * 
+ *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
- * 
+ *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this software; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street,
@@ -51,7 +51,7 @@ namespace gr {
 		this->numberEnqued = 0;
 		this->numberDequed = 0;
 		this->numberOfDroppedSamples=0;
-		this->numberWritten = 0;		
+		this->numberWritten = 0;
 		//q = moodycamel::ReaderWriterQueue<int>(2097152);
 
 		pFile = fopen64(filename.c_str(), "wb");
@@ -108,7 +108,7 @@ namespace gr {
 		{
 			numberOfDroppedSamples++;
 			printf("[!] Failed to Enque! Currently dropped %ld samples. Curren queue size: %ld\n", numberOfDroppedSamples,numberEnqued-numberDequed);
- 
+
 		}
 	}
 
@@ -150,4 +150,3 @@ namespace gr {
 
   } /* namespace ASPIN */
 } /* namespace gr */
-

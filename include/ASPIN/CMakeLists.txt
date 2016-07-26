@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    Async_File_Writer.h DESTINATION include/ASPIN
+    Async_File_Writer.h
+    Async_TCP_Client.h DESTINATION include/ASPIN
 )

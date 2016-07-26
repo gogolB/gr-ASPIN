@@ -1,6 +1,7 @@
 /usr/lib/cmake/ASPIN/ASPINConfig.cmake
 /usr/include/ASPIN/api.h
 /usr/include/ASPIN/Async_File_Writer.h
+/usr/include/ASPIN/Async_TCP_Client.h
 /usr/lib/libgnuradio-ASPIN-1.0.0git.so.0.0.0
 /usr/lib/libgnuradio-ASPIN-1.0.0git.so
 /usr/lib/libgnuradio-ASPIN.so
@@ -15,6 +16,7 @@
 /usr/lib/python2.7/dist-packages/ASPIN/__init__.pyc
 /usr/lib/python2.7/dist-packages/ASPIN/__init__.pyo
 /usr/share/gnuradio/grc/blocks/ASPIN_Async_File_Writer.xml
+/usr/share/gnuradio/grc/blocks/ASPIN_Async_TCP_Client.xml
 /usr/share/doc/gr-ASPIN/xml/index.xsd
 /usr/share/doc/gr-ASPIN/xml/classgr_1_1ASPIN_1_1Async__File__Writer__impl.xml
 /usr/share/doc/gr-ASPIN/xml/namespacegr_1_1ASPIN.xml
