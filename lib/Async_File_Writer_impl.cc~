@@ -42,14 +42,19 @@ namespace gr {
     Async_File_Writer_impl::Async_File_Writer_impl(std::string filename, int queue_size, int block_size)
       : gr::sync_block("Async_File_Writer",
               gr::io_signature::make(1, block_size, sizeof(int)),
-              gr::io_signature::make(0, 0, 0))
+              gr::io_signature::make(0, 0, 0)),q(209715200)
     {
 		this->s_filename = filename;
 		this->i_queue_size = queue_size;
 		this->i_block_size = block_size;
 		this->done = false;
+		this->numberEnqued = 0;
+		this->numberDequed = 0;
+		this->numberOfDroppedSamples=0;
+		this->numberWritten = 0;		
+		//q = moodycamel::ReaderWriterQueue<int>(2097152);
 
-		file.open(filename.c_str(), std::ios::out|std::ios::binary);
+		pFile = fopen64(filename.c_str(), "wb");
 		writer = boost::thread(boost::bind(&Async_File_Writer_impl::writeThread, this));
     }
 
@@ -59,8 +64,10 @@ namespace gr {
     Async_File_Writer_impl::~Async_File_Writer_impl()
     {
 		this->done = true;
+		printf("\nPlease wait writing %ld samples to disk...\n", numberEnqued - numberDequed);
 		writer.join();
-		file.close();
+		fclose(pFile);
+		printf("Enque: %ld, Dequed: %ld, Failed to write: %ld, Dropped: %ld\n", numberEnqued, numberDequed, numberEnqued - numberWritten, numberOfDroppedSamples);
     }
 
     int
@@ -69,9 +76,42 @@ namespace gr {
         gr_vector_void_star &output_items)
     {
       const int *in = (const int *) input_items[0];
-
+      /*
+      int numPushed = queue.push(in, noutput_items);
+      numberEnqued += numPushed;
+      if( numPushed != noutput_items)
+      {
+	 numberOfDroppedSamples += noutput_items - numPushed;
+	 printf("[!] Failed to Enque! Currently dropped %ld samples. Curren queue size: %ld\n", numberOfDroppedSamples,numberEnqued-numberDequed);
+      }
+      */
+      /*
+	for(int i = 0; i < noutput_items; i++) {
+	    if(!queue.push(in[i]))
+	    {
+		printf("[!] Failed to Enque! Currently dropped %ld samples. Current queue size:%ld\n", ++numberOfDroppedSamples, numberEnqued-numberDequed);
+	    }
+	    else
+	    {
+		numberEnqued++;
+	    }
+	}
+	*/
       // Do <+signal processing+>
-	  queue.push(*in);
+	for(int i = 0; i< noutput_items; i++)
+	{
+		if(q.try_enqueue(in[i]))
+		{
+			numberEnqued++;
+		}
+		else
+		{
+			numberOfDroppedSamples++;
+			printf("[!] Failed to Enque! Currently dropped %ld samples. Curren queue size: %ld\n", numberOfDroppedSamples,numberEnqued-numberDequed);
+ 
+		}
+	}
+
 
       // Tell runtime system how many output items we produced.
       return noutput_items;
@@ -83,11 +123,27 @@ namespace gr {
 		while(!done)
 		{
 			int p;
+			while(q.try_dequeue(p))
+			{
+				numberDequed++;
+				if(fwrite(&p, sizeof(int), 1, pFile) == 1)
+					numberWritten++;
+				else
+				{
+					printf("\033[1;31m [!] Failed to write sample to disk. Error code[%d]\033[0m\n", ferror(pFile));
+					perror(" [!] The following error occurred");
+					printf("\033[1;36m [*] Attempting to reopen file in append mode and write the sample.\033[0m\n");
+
+				}
+			}
+			/*
 			while(queue.pop(p))
 			{
-				file.write((char*)&p, sizeof(int));
+				fwrite(&p,sizeof(int), 1, pFile);
+				numberDequed++;
 			}
-			
+			*/
+			boost::this_thread::sleep(boost::posix_time::milliseconds(1));
 		}
 	}
 

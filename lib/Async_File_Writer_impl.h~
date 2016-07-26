@@ -23,8 +23,11 @@
 
 #include <ASPIN/Async_File_Writer.h>
 #include <boost/lockfree/spsc_queue.hpp>
-#include <iostream>
-#include <fstream>
+#include <stdio.h>
+#include <chrono>
+#include <boost/thread/thread.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include "readerwriterqueue.h"
 
 namespace gr {
   namespace ASPIN {
@@ -37,20 +40,24 @@ namespace gr {
       int i_queue_size;
       int i_block_size;
 
-      boost::lockfree::spsc_queue<int, boost::lockfree::capacity<1024> > queue;
-
+      //boost::lockfree::spsc_queue<int, boost::lockfree::capacity<209715200> > queue;
+      moodycamel::ReaderWriterQueue<int> q;
       int* blockArray;
       int* nextToJoin;
 
       bool done;
 
-      std::ofstream file;
+      FILE* pFile;
       boost::thread writer;
+
+      long numberEnqued;
+      long numberDequed;
+      long numberOfDroppedSamples;
 
      public:
       Async_File_Writer_impl(std::string filename, int queue_size, int block_size);
       ~Async_File_Writer_impl();
-
+     // moodycamel::ReaderWriterQueue<int> q;
       // Where all the action really happens
       int work(int noutput_items,
          gr_vector_const_void_star &input_items,
