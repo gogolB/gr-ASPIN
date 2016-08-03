@@ -2,9 +2,9 @@
 import sys
 
 def function():
-  f1 = open("/media/joe/My Passport/E312_Tests/GPS_small.bin", "rb");
-  f2 = open("/media/joe/My Passport/E312_Tests/CDMA_small.bin", "rb");
-  o  = open("/media/joe/My Passport/E312_Tests/GPS_and_CDMA_REUNITED_small.bin", "wb")
+  f2 = open("/media/joe/My Passport/HISTORY/cdma_5min_3p2.bin", "rb");
+  f1 = open("/media/joe/My Passport/HISTORY/gps_5min_3p2.bin", "rb");
+  o  = open("/media/joe/My Passport/HISTORY/gogol_combined.bin", "wb")
   i = 0;
   try:
     byte = f1.read(4)

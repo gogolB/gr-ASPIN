@@ -6,26 +6,36 @@
 
 #IncludeRegexTransform: 
 
-../include/ASPIN/Async_TCP_Client.h
+../include/ASPIN/Async_File_Writer.h
 ASPIN/api.h
 -
 gnuradio/sync_block.h
+-
+string
 -
 
 ../include/ASPIN/api.h
 gnuradio/attributes.h
 -
 
-/home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.cc
+/home/joe/gr-ASPIN/lib/Async_File_Writer_impl.cc
 config.h
 /home/joe/gr-ASPIN/lib/config.h
 gnuradio/io_signature.h
 -
-Async_TCP_Client_impl.h
-/home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.h
+Async_File_Writer_impl.h
+/home/joe/gr-ASPIN/lib/Async_File_Writer_impl.h
+string
+-
 
-/home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.h
-ASPIN/Async_TCP_Client.h
+/home/joe/gr-ASPIN/lib/Async_File_Writer_impl.h
+ASPIN/Async_File_Writer.h
+-
+boost/lockfree/spsc_queue.hpp
+-
+stdio.h
+-
+chrono
 -
 boost/thread/thread.hpp
 -
@@ -33,25 +43,7 @@ boost/date_time/posix_time/posix_time.hpp
 -
 readerwriterqueue.h
 /home/joe/gr-ASPIN/lib/readerwriterqueue.h
-stdio.h
--
-stdlib.h
--
-unistd.h
--
-errno.h
--
 string.h
--
-netdb.h
--
-sys/types.h
--
-netinet/in.h
--
-sys/socket.h
--
-arpa/inet.h
 -
 
 /home/joe/gr-ASPIN/lib/atomicops.h

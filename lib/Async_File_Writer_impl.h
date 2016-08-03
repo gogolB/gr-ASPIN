@@ -28,10 +28,17 @@
 #include <boost/thread/thread.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include "readerwriterqueue.h"
+#include <string.h>
 
 namespace gr {
   namespace ASPIN {
 
+
+    struct Job
+    {
+	    int* p_data;
+	    int numElements;
+    };	    
     class Async_File_Writer_impl : public Async_File_Writer
     {
      private:
@@ -41,13 +48,13 @@ namespace gr {
       int i_block_size;
 
       //boost::lockfree::spsc_queue<int, boost::lockfree::capacity<209715200> > queue;
-      moodycamel::ReaderWriterQueue<int> q;
-      int* blockArray;
-      int* nextToJoin;
+      moodycamel::ReaderWriterQueue<Job> q;
+      moodycamel::ReaderWriterQueue<int> q2;
 
       bool done;
 
       FILE* pFile;
+      FILE* pFile2;
       boost::thread writer;
 
       long numberEnqued;
@@ -58,7 +65,7 @@ namespace gr {
      public:
       Async_File_Writer_impl(std::string filename, int queue_size, int block_size);
       ~Async_File_Writer_impl();
-     // moodycamel::ReaderWriterQueue<int> q;
+
       // Where all the action really happens
       int work(int noutput_items,
          gr_vector_const_void_star &input_items,

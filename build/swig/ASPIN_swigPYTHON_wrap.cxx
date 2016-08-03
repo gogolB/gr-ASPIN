@@ -4874,25 +4874,6 @@ SWIG_From_std_string  (const std::string& s)
   return SWIG_FromCharPtrAndSize(s.data(), s.size());
 }
 
-
-
-
-
-SWIGINTERN int
-SWIG_AsVal_short (PyObject * obj, short *val)
-{
-  long v;
-  int res = SWIG_AsVal_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v < SHRT_MIN || v > SHRT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = static_cast< short >(v);
-    }
-  }  
-  return res;
-}
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -8183,43 +8164,53 @@ SWIGINTERN PyObject *Async_File_Writer_sptr_swigregister(PyObject *SWIGUNUSEDPAR
 
 SWIGINTERN PyObject *_wrap_Async_TCP_Client_make(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
-  char *arg1 = (char *) 0 ;
-  short arg2 ;
+  std::string arg1 ;
+  int arg2 ;
   int arg3 ;
-  int res1 ;
-  char *buf1 = 0 ;
-  int alloc1 = 0 ;
-  short val2 ;
+  int arg4 ;
+  int val2 ;
   int ecode2 = 0 ;
   int val3 ;
   int ecode3 = 0 ;
+  int val4 ;
+  int ecode4 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
   char *  kwnames[] = {
-    (char *) "serverIP",(char *) "port",(char *) "payloadSizeInSamples", NULL 
+    (char *) "serverIP",(char *) "port",(char *) "payloadSize",(char *) "queueSize", NULL 
   };
   gr::ASPIN::Async_TCP_Client::sptr result;
   
-  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OOO:Async_TCP_Client_make",kwnames,&obj0,&obj1,&obj2)) SWIG_fail;
-  res1 = SWIG_AsCharPtrAndSize(obj0, &buf1, NULL, &alloc1);
-  if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Async_TCP_Client_make" "', argument " "1"" of type '" "char *""'");
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OOOO:Async_TCP_Client_make",kwnames,&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj0, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Async_TCP_Client_make" "', argument " "1"" of type '" "std::string""'"); 
+    }
+    arg1 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
   }
-  arg1 = reinterpret_cast< char * >(buf1);
-  ecode2 = SWIG_AsVal_short(obj1, &val2);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
   if (!SWIG_IsOK(ecode2)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Async_TCP_Client_make" "', argument " "2"" of type '" "short""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "Async_TCP_Client_make" "', argument " "2"" of type '" "int""'");
   } 
-  arg2 = static_cast< short >(val2);
+  arg2 = static_cast< int >(val2);
   ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
     SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Async_TCP_Client_make" "', argument " "3"" of type '" "int""'");
   } 
   arg3 = static_cast< int >(val3);
+  ecode4 = SWIG_AsVal_int(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Async_TCP_Client_make" "', argument " "4"" of type '" "int""'");
+  } 
+  arg4 = static_cast< int >(val4);
   {
     try {
-      result = gr::ASPIN::Async_TCP_Client::make(arg1,arg2,arg3);
+      result = gr::ASPIN::Async_TCP_Client::make(arg1,arg2,arg3,arg4);
     }
     catch(std::exception &e) {
       SWIG_exception(SWIG_RuntimeError, e.what());
@@ -8230,10 +8221,8 @@ SWIGINTERN PyObject *_wrap_Async_TCP_Client_make(PyObject *SWIGUNUSEDPARM(self),
     
   }
   resultobj = SWIG_NewPointerObj((new gr::ASPIN::Async_TCP_Client::sptr(static_cast< const gr::ASPIN::Async_TCP_Client::sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr__ASPIN__Async_TCP_Client_t, SWIG_POINTER_OWN |  0 );
-  if (alloc1 == SWIG_NEWOBJ) delete[] buf1;
   return resultobj;
 fail:
-  if (alloc1 == SWIG_NEWOBJ) delete[] buf1;
   return NULL;
 }
 
@@ -8433,51 +8422,61 @@ fail:
 SWIGINTERN PyObject *_wrap_Async_TCP_Client_sptr_make(PyObject *SWIGUNUSEDPARM(self), PyObject *args, PyObject *kwargs) {
   PyObject *resultobj = 0;
   boost::shared_ptr< gr::ASPIN::Async_TCP_Client > *arg1 = (boost::shared_ptr< gr::ASPIN::Async_TCP_Client > *) 0 ;
-  char *arg2 = (char *) 0 ;
-  short arg3 ;
+  std::string arg2 ;
+  int arg3 ;
   int arg4 ;
+  int arg5 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  int res2 ;
-  char *buf2 = 0 ;
-  int alloc2 = 0 ;
-  short val3 ;
+  int val3 ;
   int ecode3 = 0 ;
   int val4 ;
   int ecode4 = 0 ;
+  int val5 ;
+  int ecode5 = 0 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
   PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
   char *  kwnames[] = {
-    (char *) "self",(char *) "serverIP",(char *) "port",(char *) "payloadSizeInSamples", NULL 
+    (char *) "self",(char *) "serverIP",(char *) "port",(char *) "payloadSize",(char *) "queueSize", NULL 
   };
   gr::ASPIN::Async_TCP_Client::sptr result;
   
-  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OOOO:Async_TCP_Client_sptr_make",kwnames,&obj0,&obj1,&obj2,&obj3)) SWIG_fail;
+  if (!PyArg_ParseTupleAndKeywords(args,kwargs,(char *)"OOOOO:Async_TCP_Client_sptr_make",kwnames,&obj0,&obj1,&obj2,&obj3,&obj4)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_boost__shared_ptrT_gr__ASPIN__Async_TCP_Client_t, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "Async_TCP_Client_sptr_make" "', argument " "1"" of type '" "boost::shared_ptr< gr::ASPIN::Async_TCP_Client > *""'"); 
   }
   arg1 = reinterpret_cast< boost::shared_ptr< gr::ASPIN::Async_TCP_Client > * >(argp1);
-  res2 = SWIG_AsCharPtrAndSize(obj1, &buf2, NULL, &alloc2);
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "Async_TCP_Client_sptr_make" "', argument " "2"" of type '" "char *""'");
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "Async_TCP_Client_sptr_make" "', argument " "2"" of type '" "std::string""'"); 
+    }
+    arg2 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
   }
-  arg2 = reinterpret_cast< char * >(buf2);
-  ecode3 = SWIG_AsVal_short(obj2, &val3);
+  ecode3 = SWIG_AsVal_int(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Async_TCP_Client_sptr_make" "', argument " "3"" of type '" "short""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "Async_TCP_Client_sptr_make" "', argument " "3"" of type '" "int""'");
   } 
-  arg3 = static_cast< short >(val3);
+  arg3 = static_cast< int >(val3);
   ecode4 = SWIG_AsVal_int(obj3, &val4);
   if (!SWIG_IsOK(ecode4)) {
     SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "Async_TCP_Client_sptr_make" "', argument " "4"" of type '" "int""'");
   } 
   arg4 = static_cast< int >(val4);
+  ecode5 = SWIG_AsVal_int(obj4, &val5);
+  if (!SWIG_IsOK(ecode5)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "Async_TCP_Client_sptr_make" "', argument " "5"" of type '" "int""'");
+  } 
+  arg5 = static_cast< int >(val5);
   {
     try {
-      result = (*arg1)->make(arg2,arg3,arg4);
+      result = (*arg1)->make(arg2,arg3,arg4,arg5);
     }
     catch(std::exception &e) {
       SWIG_exception(SWIG_RuntimeError, e.what());
@@ -8488,10 +8487,8 @@ SWIGINTERN PyObject *_wrap_Async_TCP_Client_sptr_make(PyObject *SWIGUNUSEDPARM(s
     
   }
   resultobj = SWIG_NewPointerObj((new gr::ASPIN::Async_TCP_Client::sptr(static_cast< const gr::ASPIN::Async_TCP_Client::sptr& >(result))), SWIGTYPE_p_boost__shared_ptrT_gr__ASPIN__Async_TCP_Client_t, SWIG_POINTER_OWN |  0 );
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
   return resultobj;
 fail:
-  if (alloc2 == SWIG_NEWOBJ) delete[] buf2;
   return NULL;
 }
 
@@ -11492,7 +11489,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Async_File_Writer_sptr_message_subscribers", (PyCFunction) _wrap_Async_File_Writer_sptr_message_subscribers, METH_VARARGS | METH_KEYWORDS, (char *)"Async_File_Writer_sptr_message_subscribers(Async_File_Writer_sptr self, swig_int_ptr which_port) -> swig_int_ptr"},
 	 { (char *)"Async_File_Writer_sptr_swigregister", Async_File_Writer_sptr_swigregister, METH_VARARGS, NULL},
 	 { (char *)"Async_TCP_Client_make", (PyCFunction) _wrap_Async_TCP_Client_make, METH_VARARGS | METH_KEYWORDS, (char *)"\n"
-		"Async_TCP_Client_make(char * serverIP, short port, int payloadSizeInSamples) -> Async_TCP_Client_sptr\n"
+		"Async_TCP_Client_make(std::string serverIP, int port, int payloadSize, int queueSize) -> Async_TCP_Client_sptr\n"
 		"\n"
 		"Return a shared_ptr to a new instance of ASPIN::Async_TCP_Client.\n"
 		"\n"
@@ -11509,7 +11506,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"Async_TCP_Client_sptr___deref__", _wrap_Async_TCP_Client_sptr___deref__, METH_VARARGS, (char *)"Async_TCP_Client_sptr___deref__(Async_TCP_Client_sptr self) -> Async_TCP_Client"},
 	 { (char *)"delete_Async_TCP_Client_sptr", _wrap_delete_Async_TCP_Client_sptr, METH_VARARGS, (char *)"delete_Async_TCP_Client_sptr(Async_TCP_Client_sptr self)"},
 	 { (char *)"Async_TCP_Client_sptr_make", (PyCFunction) _wrap_Async_TCP_Client_sptr_make, METH_VARARGS | METH_KEYWORDS, (char *)"\n"
-		"Async_TCP_Client_sptr_make(Async_TCP_Client_sptr self, char * serverIP, short port, int payloadSizeInSamples) -> Async_TCP_Client_sptr\n"
+		"Async_TCP_Client_sptr_make(Async_TCP_Client_sptr self, std::string serverIP, int port, int payloadSize, int queueSize) -> Async_TCP_Client_sptr\n"
 		"\n"
 		"Return a shared_ptr to a new instance of ASPIN::Async_TCP_Client.\n"
 		"\n"

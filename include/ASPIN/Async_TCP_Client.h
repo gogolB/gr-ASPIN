@@ -46,7 +46,7 @@ namespace gr {
        * class. ASPIN::Async_TCP_Client::make is the public interface for
        * creating new instances.
        */
-      static sptr make(char* serverIP, short port, int payloadSizeInSamples);
+      static sptr make(std::string serverIP, int port, int payloadSize, int queueSize);
     };
 
   } // namespace ASPIN

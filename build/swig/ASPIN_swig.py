@@ -420,7 +420,7 @@ class Async_TCP_Client(object):
     __repr__ = _swig_repr
     def make(*args, **kwargs):
         """
-        make(char * serverIP, short port, int payloadSizeInSamples) -> Async_TCP_Client_sptr
+        make(std::string serverIP, int port, int payloadSize, int queueSize) -> Async_TCP_Client_sptr
 
         Return a shared_ptr to a new instance of ASPIN::Async_TCP_Client.
 
@@ -438,7 +438,7 @@ Async_TCP_Client_swigregister(Async_TCP_Client)
 
 def Async_TCP_Client_make(*args, **kwargs):
   """
-    Async_TCP_Client_make(char * serverIP, short port, int payloadSizeInSamples) -> Async_TCP_Client_sptr
+    Async_TCP_Client_make(std::string serverIP, int port, int payloadSize, int queueSize) -> Async_TCP_Client_sptr
 
     Return a shared_ptr to a new instance of ASPIN::Async_TCP_Client.
 
@@ -468,7 +468,7 @@ class Async_TCP_Client_sptr(object):
     __del__ = lambda self : None;
     def make(self, *args, **kwargs):
         """
-        make(Async_TCP_Client_sptr self, char * serverIP, short port, int payloadSizeInSamples) -> Async_TCP_Client_sptr
+        make(Async_TCP_Client_sptr self, std::string serverIP, int port, int payloadSize, int queueSize) -> Async_TCP_Client_sptr
 
         Return a shared_ptr to a new instance of ASPIN::Async_TCP_Client.
 
