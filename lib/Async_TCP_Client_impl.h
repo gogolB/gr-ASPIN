@@ -22,15 +22,41 @@
 #define INCLUDED_ASPIN_ASYNC_TCP_CLIENT_IMPL_H
 
 #include <ASPIN/Async_TCP_Client.h>
+#include "readerwriterqueue.h"
+
+// Networking includes
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
 
 namespace gr {
   namespace ASPIN {
+
+    struct Job
+    {
+	int* pData;
+	int numElements;
+    };
 
     class Async_TCP_Client_impl : public Async_TCP_Client
     {
      private:
       // Nothing to declare in this block.
+      const char* ServerIP;
+      int port;
+      int payloadSize;
 
+
+      moodycamel::ReaderWriterQueue<Job> q;
+
+      void connectToServer();
+      void disconnectFromServer();
      public:
       Async_TCP_Client_impl(std::string serverIP, int port, int payloadSize, int queueSize);
       ~Async_TCP_Client_impl();

@@ -43,6 +43,8 @@ lib/CMakeFiles/gnuradio-ASPIN.dir/Async_TCP_Client_impl.cc.o
  ../include/ASPIN/api.h
  /home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.cc
  /home/joe/gr-ASPIN/lib/Async_TCP_Client_impl.h
+ /home/joe/gr-ASPIN/lib/atomicops.h
+ /home/joe/gr-ASPIN/lib/readerwriterqueue.h
  /usr/local/include/gnuradio/api.h
  /usr/local/include/gnuradio/attributes.h
  /usr/local/include/gnuradio/basic_block.h

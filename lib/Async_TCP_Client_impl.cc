@@ -41,14 +41,22 @@ namespace gr {
     Async_TCP_Client_impl::Async_TCP_Client_impl(std::string serverIP, int port, int payloadSize, int queueSize)
       : gr::sync_block("Async_TCP_Client",
               gr::io_signature::make(1, 1, sizeof(int)),
-              gr::io_signature::make(0, 0, 0))
-    {}
+              gr::io_signature::make(0, 0, 0)),
+	      q(queueSize)
+    {
+	this->ServerIP = serverIP.c_str();
+	this->port = port;
+	this->payloadSize = payloadSize;
+
+	connectToServer();
+    }
 
     /*
      * Our virtual destructor.
      */
     Async_TCP_Client_impl::~Async_TCP_Client_impl()
     {
+
     }
 
     int
@@ -62,6 +70,18 @@ namespace gr {
 
       // Tell runtime system how many output items we produced.
       return noutput_items;
+    }
+
+    // This function will attempt to connect to ServerIP:port. It will wait forever.
+    void Async_TCP_Client_impl::connectToServer()
+    {
+
+    }
+
+    // Will disconnect client from server.
+    void Async_TCP_Client_impl::disconnectFromServer()
+    {
+	
     }
 
   } /* namespace ASPIN */
