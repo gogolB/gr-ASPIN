@@ -48,11 +48,15 @@ namespace gr {
       int i_block_size;
 
       //boost::lockfree::spsc_queue<int, boost::lockfree::capacity<209715200> > queue;
+#ifdef USE_JOB_SYSTEM
       moodycamel::ReaderWriterQueue<Job> q;
-      moodycamel::ReaderWriterQueue<int> q2;
+#else
+      moodycamel::ReaderWriterQueue<int> q;
+#endif
 
       bool done;
 
+      int fd;
       FILE* pFile;
       FILE* pFile2;
       boost::thread writer;
@@ -65,7 +69,7 @@ namespace gr {
      public:
       Async_File_Writer_impl(std::string filename, int queue_size, int block_size);
       ~Async_File_Writer_impl();
-
+     // moodycamel::ReaderWriterQueue<int> q;
       // Where all the action really happens
       int work(int noutput_items,
          gr_vector_const_void_star &input_items,

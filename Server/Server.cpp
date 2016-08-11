@@ -1,5 +1,9 @@
 /*
 	TCP Server for ASPIN LAB to record data from the ettus E312.
+	@Author: Souradeep "Gogol" Bhattacharya
+
+	A Packet must look like the following.
+	[byte channel (1 or 2)][int numSamples][int sample0 to int samples(numSamples -1)]
 */
 
 #include <stdio.h>
@@ -12,12 +16,15 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <signal.h>
+#include <boost/thread.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
 #include "readerwriterqueue.h"
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 1000000
 #define QUEUE_LENGTH 1024
-
+#define FILE_1 "file1.bin"
+#define FILE_2 "file2.bin"
 
 // Global is done variable.
 bool done = false;
@@ -28,7 +35,7 @@ bool done = false;
 
 struct Job
 {
-	int* pData;
+	int* p_data;
 	int numElements;
 };
 
@@ -59,14 +66,50 @@ void success(const char* msg)
 // Interupt handler
 void _handler(int s)
 {
-	info("Caught the signal");
-	exit(2);
+	info("Caught the signal.\n   Terminating the server now.");
+	done = true;
 }
 
 // ******************************************************************************
 //				File Writer threads
 // ******************************************************************************
 
+moodycamel::ReaderWriterQueue<Job> q(QUEUE_LENGTH);
+moodycamel::ReaderWriterQueue<Job> q1(QUEUE_LENGTH);
+
+FILE* f1;
+FILE* f2;
+
+
+void writeThread1()
+{
+	while(!done)
+	{
+		Job p;
+		while(q.try_dequeue(p))
+		{
+			// Write it to the file.
+			fwrite(p.p_data, sizeof(int), p.numElements, f1);
+			delete [] p.p_data;
+		}
+	}
+	boost::this_thread::sleep(boost::posix_time::milliseconds(5));
+}
+
+void writeThread2()
+{
+	while(!done)
+	{
+		Job p;
+		while(q1.try_dequeue(p))
+		{
+			// Write it to the file.
+			fwrite(p.p_data, sizeof(int), p.numElements, f2);
+			delete [] p.p_data;
+		}
+	}
+	boost::this_thread::sleep(boost::posix_time::milliseconds(5));
+}
 
 
 // ******************************************************************************
@@ -131,6 +174,16 @@ int main (int argc, char **argv)
 
 	// Init the file writers
 	info("Starting the file writers...");
+	
+	boost::thread writer;
+	boost::thread writer2;
+
+	f1 = fopen64(FILE_1, "wb");
+	f2 = fopen64(FILE_2, "wb");
+
+	writer = boost::thread(writeThread1);
+	writer2 = boost::thread(writeThread2);
+	
 
 	success("Filewriter init done.");
 
@@ -148,17 +201,60 @@ int main (int argc, char **argv)
 
 	}
 	success("Server has a connection!");
-
+ 
+	hostp = gethostbyaddr((const char*) &clientaddr.sin_addr.s_addr, sizeof(clientaddr.sin_addr.s_addr), AF_INET);
+	if(hostp == NULL)
+		error("Failed to get host addr");
+	hostaddrp = inet_ntoa(clientaddr.sin_addr);
+	
+	printf("Server established connection with %s (%s)\n", hostp->h_name, hostaddrp);
 	// Wait for the program to issue a shutdown.
 	while(!done)
 	{
 		// Read data from the socket.
+		bzero(buf, BUFFER_SIZE);
+		n = read(childfd, buf, BUFFER_SIZE);
+		
+		// Convert it to a int.
+		int* p = (int*)buf[1];
+		// First int is number of elements.
+		int numE = p[0];
+		// Create a new data pointer.
+		int* data = p + 1;
+		
+		Job j = Job();
+		j.numElements = numE;
 
+		j.p_data = new int[numE];
+
+		memcpy(j.p_data, data, sizeof(int)*numE);
+		
 		// Enque the data
-	}		
+		if(buf[0] == 1)
+		{
+			// This data is for queue one.
+			q.try_enqueue(j);
+		}
+		else if(buf[0] == 2)
+		{
+			// This data is for queue two.
+			q1.try_enqueue(j);
+		}
+	}
+	info("Closeing the socket.");		
 	// Close Close the socket.
+	close(childfd);
 
+	info("Waiting for the file writers to catch up.");
 	// Wait for the file writers to catch up.
 
+	writer.join();
+	writer2.join();
+	
 	// Close Files.	
+	info("Closing out the files.");
+	fclose(f1);
+	fclose(f2);
+	success("Done!");
+	return 0;
 }

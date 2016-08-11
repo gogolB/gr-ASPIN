@@ -41,11 +41,27 @@ string.h
 -
 sys/types.h
 -
+netdb.h
+-
 netinet/in.h
 -
 sys/socket.h
 -
 arpa/inet.h
+-
+boost/date_time/posix_time/posix_time.hpp
+-
+boost/thread/thread.hpp
+-
+malloc.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
 -
 
 /home/joe/gr-ASPIN/lib/atomicops.h
